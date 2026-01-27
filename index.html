@@ -3,43 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blooming Spark</title>
+    <title>Blooming Spark Apps</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             text-align: center; 
-            padding: 50px 20px; 
+            padding: 40px 20px; 
             background-color: #F8F9FA; 
             color: #333; 
             line-height: 1.6;
         }
-        h1 { 
-            color: #006994; 
-            font-size: 3.5em; 
-            margin-bottom: 20px;
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #006994; font-size: 2.5em; margin-bottom: 10px; }
+        .intro { font-size: 1.2em; color: #555; margin-bottom: 40px; }
+        
+        .app-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
-        p { 
-            font-size: 1.2em; 
-            max-width: 600px; 
-            margin: 20px auto; 
-        }
-        .status { 
-            display: inline-block;
-            margin-top: 40px;
-            padding: 12px 24px;
-            background-color: #1CA9C9; 
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #eee;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
+            color: #999;
+            flex-shrink: 0;
         }
+        .app-info h2 { margin: 0; color: #006994; }
+        .app-info p { margin: 10px 0; font-size: 1em; color: #444; }
+        
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #1CA9C9;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.8em;
+            text-decoration: none;
+        }
+        .badge.coming-soon { background: #6c757d; }
+
+        footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #ddd; padding-top: 20px; }
     </style>
 </head>
 <body>
-<h1>Blooming Spark Apps</h1>
-    <p><strong>Spark Button:</strong> A simple app providing small exercises that help you focus and release stress.</p>
-    <p><strong>Blooming Spark:</strong> A gentle planner designed to help manage routines and focus on what matters.</p>
-    <div class="status">Under Construction</div>
-    <p style="font-size: 0.9em; color: #666;">Our website is currently under construction. Stay tuned!</p>
+    <div class="container">
+        <h1>Blooming Spark Apps</h1>
+        <p class="intro">Tools designed with care for the ADHD brain.</p>
+
+        <div class="app-card">
+            <img src="spark-button.png" alt="Spark Button Icon" class="app-icon">
+            <div class="app-info">
+                <h2>Spark Button</h2>
+                <p>Find your center instantly. A collection of micro-exercises to help you regain focus and manage sensory overload or stress in seconds.</p>
+                <span class="badge coming-soon">Coming soon to Google Play</span>
+            </div>
+        </div>
+
+        <div class="app-card">
+            <img src="blooming-spark.png" alt="Blooming Spark Icon" class="app-icon">
+            <div class="app-info">
+                <h2>Blooming Spark</h2>
+                <p>A gentle, non-intrusive daily planner. It helps you stay on track with routines without the pressure of traditional scheduling tools.</p>
+                <span class="badge coming-soon">Under construction</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Blooming Spark Apps. Created by a developer who understands.</p>
+            <p>Contact: support@bloomingsparkapp.com</p>
+        </footer>
+    </div>
 </body>
 </html>
