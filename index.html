@@ -8,73 +8,92 @@
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             text-align: center; 
-            padding: 40px 20px; 
+            padding: 20px 20px; 
             background-color: #F8F9FA; 
             color: #333; 
             line-height: 1.6;
         }
         .container { max-width: 800px; margin: 0 auto; }
+        .lang-switcher { margin-bottom: 30px; display: flex; justify-content: flex-end; }
+        .lang-btn { 
+            background: #eee; border: none; padding: 6px 12px; 
+            cursor: pointer; border-radius: 20px; margin-left: 10px; font-weight: bold;
+            transition: 0.3s;
+        }
+        .lang-btn.active { background: #006994; color: white; }
+        
         h1 { color: #006994; font-size: 2.5em; margin-bottom: 10px; }
         .intro { font-size: 1.2em; color: #555; margin-bottom: 40px; }
         
         .app-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            background: white; border-radius: 16px; padding: 25px;
+            margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: left; display: flex; align-items: center; gap: 20px;
         }
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            object-fit: contain; 
-        }
+        .app-icon { width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0; object-fit: contain; }
         .app-info h2 { margin: 0; color: #006994; }
         .app-info p { margin: 10px 0; font-size: 1em; color: #444; }
         
         .badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #1CA9C9;
-            color: white;
-            border-radius: 6px;
-            font-size: 0.8em;
-            text-decoration: none;
+            display: inline-block; padding: 6px 12px; background: #1CA9C9;
+            color: white; border-radius: 6px; font-size: 0.8em; text-decoration: none;
         }
         .badge.coming-soon { background: #6c757d; }
 
         footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #ddd; padding-top: 20px; }
+        [lang="ua"] { display: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Blooming Spark Apps</h1>
-        <p class="intro">Tools designed with care for the ADHD brain.</p>
+        <div class="lang-switcher">
+            <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+            <button id="btn-ua" class="lang-btn" onclick="setLang('ua')">UA</button>
+        </div>
 
-        <div class="app-card">
-            <img src="spark-button.png" alt="Spark Button Icon" class="app-icon">
-            <div class="app-info">
-                <h2>Spark Button</h2>
-                <p>Find your center instantly. A collection of micro-exercises to help you regain focus and manage sensory overload or stress in seconds.</p>
-                <span class="badge coming-soon">Coming soon to Google Play</span>
+        <div id="content-en" lang="en">
+            <h1>Blooming Spark Apps</h1>
+            <p class="intro">Tools designed with care for the ADHD brain.</p>
+
+            <div class="app-card">
+                <img src="spark-button.png" alt="Spark Button Icon" class="app-icon">
+                <div class="app-info">
+                    <h2>Spark Button</h2>
+                    <p>Find your center instantly. A collection of micro-exercises to help you regain focus and manage sensory overload or stress in seconds.</p>
+                    <span class="badge coming-soon">Coming soon to Google Play</span>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <img src="blooming-spark.png" alt="Blooming Spark Icon" class="app-icon">
+                <div class="app-info">
+                    <h2>Blooming Spark</h2>
+                    <p>A gentle, non-intrusive daily planner. It helps you stay on track with routines without the pressure of traditional scheduling tools.</p>
+                    <span class="badge coming-soon">Under construction</span>
+                </div>
             </div>
         </div>
 
-        <div class="app-card">
-            <img src="blooming-spark.png" alt="Blooming Spark Icon" class="app-icon">
-            <div class="app-info">
-                <h2>Blooming Spark</h2>
-                <p>A gentle, non-intrusive daily planner. It helps you stay on track with routines without the pressure of traditional scheduling tools.</p>
-                <span class="badge coming-soon">Under construction</span>
+        <div id="content-ua" lang="ua">
+            <h1>Blooming Spark Apps</h1>
+            <p class="intro">Інструменти, створені з турботою для людей з СДВГ.</p>
+
+            <div class="app-card">
+                <img src="spark-button.png" alt="Spark Button Icon" class="app-icon">
+                <div class="app-info">
+                    <h2>Spark Button</h2>
+                    <p>Миттєво знайдіть рівновагу. Колекція мікровправ, що допомагають повернути фокус та подолати сенсорне перевантаження чи стрес за лічені секунди.</p>
+                    <span class="badge coming-soon">Скоро у Google Play</span>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <img src="blooming-spark.png" alt="Blooming Spark Icon" class="app-icon">
+                <div class="app-info">
+                    <h2>Blooming Spark</h2>
+                    <p>М’який та ненав’язливий щоденний планувальник. Допомагає дотримуватися рутини без тиску, притаманного звичайним органайзерам.</p>
+                    <span class="badge coming-soon">В розробці</span>
+                </div>
             </div>
         </div>
 
@@ -83,5 +102,18 @@
             <p>Contact: <a href="mailto:blommingsparkapp@gmail.com">blommingsparkapp@gmail.com</a></p>
         </footer>
     </div>
+
+    <script>
+        function setLang(lang) {
+            // Скрываем все языковые блоки
+            document.querySelectorAll('[lang]').forEach(el => el.style.display = 'none');
+            // Показываем нужный
+            document.getElementById('content-' + lang).style.display = 'block';
+            
+            // Управляем активностью кнопок
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
 </body>
 </html>
