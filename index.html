@@ -30,14 +30,29 @@
             text-align: left; display: flex; align-items: center; gap: 20px;
         }
         .app-icon { width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0; object-fit: contain; }
+        .app-info { flex-grow: 1; }
         .app-info h2 { margin: 0; color: #006994; }
         .app-info p { margin: 10px 0; font-size: 1em; color: #444; }
         
+        .actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+        
         .badge {
-            display: inline-block; padding: 6px 12px; background: #1CA9C9;
+            display: inline-block; padding: 6px 12px; background: #006994;
             color: white; border-radius: 6px; font-size: 0.8em; text-decoration: none;
         }
-        .badge.coming-soon { background: #6c757d; }
+        
+        .btn-cta {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #ef2c80;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.8em;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .btn-cta:hover { opacity: 0.9; }
 
         footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #ddd; padding-top: 20px; }
         
@@ -60,7 +75,10 @@
                 <div class="app-info">
                     <h2>Spark Button</h2>
                     <p>Your instant calm button. Get a quick, random exercise to reduce stress and sharpen your focus whenever you need it.</p>
-                    <span class="badge coming-soon">Coming soon to Google Play</span>
+                    <div class="actions">
+                        <span class="badge">Coming soon to Google Play</span>
+                        <a href="beta.html" class="btn-cta">Join Beta Test</a>
+                    </div>
                 </div>
             </div>
             <div class="app-card">
@@ -68,7 +86,9 @@
                 <div class="app-info">
                     <h2>Blooming Spark</h2>
                     <p>A gentle, non-intrusive daily planner. It helps you stay on track with routines without the pressure of traditional scheduling tools.</p>
-                    <span class="badge coming-soon">Under construction</span>
+                    <div class="actions">
+                        <span class="badge">Under construction</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,7 +101,10 @@
                 <div class="app-info">
                     <h2>Spark Button</h2>
                     <p>Миттєве перезавантаження. Одне натискання — і у вас є коротка вправа, щоб швидко зняти напругу та зібратися з думками.</p>
-                    <span class="badge coming-soon">Скоро у Google Play</span>
+                    <div class="actions">
+                        <span class="badge">Скоро у Google Play</span>
+                        <a href="beta.html" class="btn-cta">Долучитися до бета-тесту</a>
+                    </div>
                 </div>
             </div>
             <div class="app-card">
@@ -89,7 +112,9 @@
                 <div class="app-info">
                     <h2>Blooming Spark</h2>
                     <p>М’який та ненав’язливий щоденний планувальник. Допомагає дотримуватися рутини без тиску, притаманного звичайним органайзерам.</p>
-                    <span class="badge coming-soon">У розробці</span>
+                    <div class="actions">
+                        <span class="badge">У розробці</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +127,10 @@
                 <div class="app-info">
                     <h2>Spark Button</h2>
                     <p>Ваша кнопка мгновенного спокойствия. Получите быстрое случайное упражнение, чтобы снять стресс и сосредоточиться в любой момент.</p>
-                    <span class="badge coming-soon">Скоро в Google Play</span>
+                    <div class="actions">
+                        <span class="badge">Скоро в Google Play</span>
+                        <a href="beta.html" class="btn-cta">Участвовать в бета-тесте</a>
+                    </div>
                 </div>
             </div>
             <div class="app-card">
@@ -110,7 +138,9 @@
                 <div class="app-info">
                     <h2>Blooming Spark</h2>
                     <p>Мягкий и ненавязчивый планировщик. Помогает придерживаться рутины без давления, характерного для обычных органайзеров.</p>
-                    <span class="badge coming-soon">В разработке</span>
+                    <div class="actions">
+                        <span class="badge">В разработке</span>
+                    </div>
                 </div>
             </div>
         </div>
