@@ -13,7 +13,7 @@
             color: #333; 
             line-height: 1.6;
         }
-        .container { max-width: 1000px; margin: 0 auto; } /* Увеличил ширину для двух колонок */
+        .container { max-width: 1000px; margin: 0 auto; } 
         .lang-switcher { margin-bottom: 30px; display: flex; justify-content: flex-end; }
         .lang-btn { 
             background: #eee; border: none; padding: 6px 12px; 
@@ -23,16 +23,15 @@
         
         h1 { color: #006994; font-size: 2.5em; margin-bottom: 40px; }
         
-        /* Сетка для колонок */
         .content-grid {
             display: flex;
             gap: 40px;
             text-align: left;
-            flex-wrap: wrap; /* Для адаптивности на мобилках */
+            flex-wrap: wrap; 
         }
         .column {
             flex: 1;
-            min-width: 300px; /* Чтобы колонки не становились слишком узкими */
+            min-width: 300px; 
         }
         
         .category-title {
@@ -40,7 +39,7 @@
             font-size: 1.1em;
             font-weight: 600;
             margin: 0 0 25px 0;
-            min-height: 3.2em; /* Выравнивает начало карточек, если заголовки разной длины */
+            min-height: 3.2em; 
             display: flex;
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
@@ -77,7 +76,6 @@
         
         #content-ua, #content-ru { display: none; }
 
-        /* Адаптация под мобильные устройства */
         @media (max-width: 768px) {
             .category-title { min-height: auto; }
             .content-grid { gap: 20px; }
